@@ -1299,6 +1299,55 @@
         </data>
       </profile>
     </profiles>
+    <profiles func="0x3F" description="Universal">
+      <profile type="0x7F" description="Universal">
+        <data>
+          <value shortcut="MSB" description="Time MSB" offset="0" size="8" unit="1/10 ms">
+            <range>
+              <min>0</min>
+              <max>255</max>
+            </range>
+            <scale>
+              <min>0</min>
+              <max>255</max>
+            </scale>
+          </value>
+          <value shortcut="LSB" description="Time LSB" offset="8" size="8" unit="1/10 ms">
+            <range>
+              <min>0</min>
+              <max>255</max>
+            </range>
+            <scale>
+              <min>0</min>
+              <max>255</max>
+            </scale>
+          </value>
+          <enum description="Command" shortcut="CMD" offset="16" size="8">
+            <item description="Stop" value="0" />
+            <item description="Up" value="1" />
+            <item description="Down" value="2" />
+            <item description="Status request" value="3" />
+          </enum>
+          <enum description="DB0.7" shortcut="DB0.7" offset="24" size="4">
+            <item description="constant" value="0" />
+          </enum>
+          <enum description="LRN bit" shortcut="LNRB" offset="28" size="1">
+            <item description="Teach-in telegram" value="0" />
+            <item description="Data telegram" value="1" />
+          </enum>
+          <enum description="Lock/Unlock" shortcut="LCK" offset="29" size="1">
+            <item description="Unlock" value="0" />
+            <item description="Lock" value="1" />
+          </enum>
+          <enum description="Time unit" shortcut="DB0.1" offset="30" size="1">
+            <item description="100ms" value="1" />
+          </enum>
+          <enum description="DB0.0" shortcut="DB0.0" offset="31" size="1">
+            <item description="constant" value="0" />
+          </enum>
+        </data>
+      </profile>
+    </profiles>
   </telegram>
   <telegram rorg="0xD2" type="VLD" description="VLD Telegram">
     <profiles func="0x01" description="Electronic switches and dimmers with Energy Measurement and Local Control">
